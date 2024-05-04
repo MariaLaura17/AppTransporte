@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBD5EA"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_TituloReserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservas"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="22dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Segunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segunda-Feira"
+        android:textColor="@color/black"
+        app:buttonIconTint="#A02F2F"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <Button
+        android:id="@+id/button_Enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#842B2B"
+        android:backgroundTint="#D13535"
+        android:text="Enviar"
+        app:iconTint="#FF8585"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <Spinner
+        android:id="@+id/spinner_EmbSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:spinnerMode="dropdown"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Terca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terça-Feira"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Quarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quarta-Feira"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Quinta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quinta-Feira"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Sexta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexta-Feira"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <Spinner
+        android:id="@+id/spinner_DesSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Spinner
+        android:id="@+id/spinner_EmbTerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <Spinner
+        android:id="@+id/spinner_DesTerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <Spinner
+        android:id="@+id/spinner_EmbQuarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <Spinner
+        android:id="@+id/spinner_DesQuarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <Spinner
+        android:id="@+id/spinner_EmbQuinta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <Spinner
+        android:id="@+id/spinner_DesQuinta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="469dp" />
+
+    <Spinner
+        android:id="@+id/spinner_EmbSexta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <Spinner
+        android:id="@+id/spinner_DesSexta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
