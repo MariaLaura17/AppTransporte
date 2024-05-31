@@ -1,0 +1,6 @@
+com.example.apptransporte.test.app-annotation-experimental-1.3.0-0 C:\Users\pedro\.gradle\caches\transforms-4\b4db382562c17c423e194c1d2a22aede\transformed\annotation-experimental-1.3.0\res
+com.example.apptransporte.test.app-core-1.5.0-1 C:\Users\pedro\.gradle\caches\transforms-4\eaaa7e944fe4b859fed0ac2c985395db\transformed\core-1.5.0\res
+com.example.apptransporte.test.app-androidTest-2 C:\Users\pedro\AndroidStudioProjects\A3\AppTransporte\app\build\generated\res\resValues\androidTest\debug
+com.example.apptransporte.test.app-mergeDebugAndroidTestResources-3 C:\Users\pedro\AndroidStudioProjects\A3\AppTransporte\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.apptransporte.test.app-mergeDebugAndroidTestResources-4 C:\Users\pedro\AndroidStudioProjects\A3\AppTransporte\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.apptransporte.test.app-debugAndroidTest-5 C:\Users\pedro\AndroidStudioProjects\A3\AppTransporte\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -28,10 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Apptransporte" >
         <activity
-            android:name="com.example.apptransporte.CadViagemActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.apptransporte.AdmInicialActivity"
+            android:name="com.example.apptransporte.PrincipalActivity"
             android:exported="false" />
         <activity
             android:name="com.example.apptransporte.LoginActivity"
@@ -44,13 +41,7 @@
         </activity>
         <activity
             android:name="com.example.apptransporte.CadastrarReservaActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

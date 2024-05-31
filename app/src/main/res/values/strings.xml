@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Apptransporte</string>
+    <string name="descricao_fab_reservar">Reservar Viagem</string>
 </resources>

@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Apptransporte</string>
+    <string name="descricao_fab_reservar">Reservar Viagem</string>
     <style name="Base.Theme.Apptransporte" parent="Theme.Material3.DayNight.NoActionBar">
         
         

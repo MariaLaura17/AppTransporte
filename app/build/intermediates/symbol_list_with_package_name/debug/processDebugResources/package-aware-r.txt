@@ -2954,6 +2954,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_action_adicionar
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3239,6 +3240,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabReservarViagem
 id fade
 id fill
 id fill_horizontal
@@ -3687,10 +3689,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_cad_viagem
 layout activity_cadastrar_reserva
 layout activity_login
-layout activity_relatorio
+layout activity_principal
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3818,6 +3819,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string descricao_fab_reservar
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description

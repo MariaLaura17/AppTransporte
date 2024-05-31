@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable ic_action_adicionar
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id buttonLogin
@@ -13,6 +14,7 @@ id checkBox_Sexta
 id checkBox_Terca
 id editTextPassword
 id editTextUsuario
+id fabReservarViagem
 id frameLayout
 id frameLayout2
 id imageView
@@ -34,13 +36,13 @@ id textViewMensagemResumo
 id textViewRelatório
 id textViewRodape
 id textView_TituloReserva
-layout activity_cad_viagem
 layout activity_cadastrar_reserva
 layout activity_login
-layout activity_relatorio
+layout activity_principal
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string descricao_fab_reservar
 style Base.Theme.Apptransporte
 style Theme.Apptransporte
 xml backup_rules
