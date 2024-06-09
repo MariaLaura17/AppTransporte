@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +36,9 @@ public final class ActivityPrincipalBinding implements ViewBinding {
   public final LinearLayout linearLayout;
 
   @NonNull
+  public final ListView listviewprincipalpassageiro;
+
+  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
@@ -52,14 +56,15 @@ public final class ActivityPrincipalBinding implements ViewBinding {
   private ActivityPrincipalBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton fabReservarViagem, @NonNull FrameLayout frameLayout,
       @NonNull FrameLayout frameLayout2, @NonNull LinearLayout linearLayout,
-      @NonNull ConstraintLayout main, @NonNull TextView textViewBoasVindas,
-      @NonNull TextView textViewMensagemResumo, @NonNull TextView textViewRelatRio,
-      @NonNull TextView textViewRodape) {
+      @NonNull ListView listviewprincipalpassageiro, @NonNull ConstraintLayout main,
+      @NonNull TextView textViewBoasVindas, @NonNull TextView textViewMensagemResumo,
+      @NonNull TextView textViewRelatRio, @NonNull TextView textViewRodape) {
     this.rootView = rootView;
     this.fabReservarViagem = fabReservarViagem;
     this.frameLayout = frameLayout;
     this.frameLayout2 = frameLayout2;
     this.linearLayout = linearLayout;
+    this.listviewprincipalpassageiro = listviewprincipalpassageiro;
     this.main = main;
     this.textViewBoasVindas = textViewBoasVindas;
     this.textViewMensagemResumo = textViewMensagemResumo;
@@ -118,6 +123,12 @@ public final class ActivityPrincipalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.listviewprincipalpassageiro;
+      ListView listviewprincipalpassageiro = ViewBindings.findChildViewById(rootView, id);
+      if (listviewprincipalpassageiro == null) {
+        break missingId;
+      }
+
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.textViewBoasVindas;
@@ -145,8 +156,8 @@ public final class ActivityPrincipalBinding implements ViewBinding {
       }
 
       return new ActivityPrincipalBinding((ConstraintLayout) rootView, fabReservarViagem,
-          frameLayout, frameLayout2, linearLayout, main, textViewBoasVindas, textViewMensagemResumo,
-          textViewRelatRio, textViewRodape);
+          frameLayout, frameLayout2, linearLayout, listviewprincipalpassageiro, main,
+          textViewBoasVindas, textViewMensagemResumo, textViewRelatRio, textViewRodape);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
