@@ -1,18 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_cadastrar_reserva.xml",
-        "source": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_cadastrar_reserva.xml"
+        "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_login.xml",
+        "source": "com.example.apptransporte.app-main-33:/layout/activity_login.xml"
     },
     {
         "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_principal.xml",
         "source": "com.example.apptransporte.app-main-33:/layout/activity_principal.xml"
     },
     {
-        "merged": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_principal.xml",
-        "source": "C:\\Users\\pedro\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_principal.xml"
+        "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_cadastrar_reserva.xml",
+        "source": "com.example.apptransporte.app-main-33:/layout/activity_cadastrar_reserva.xml"
     }
 ]

@@ -1,17 +1,23 @@
 package com.example.apptransporte
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.apptransporte.database.DataBase
+import com.example.apptransporte.database.Database
+import com.example.apptransporte.database.PersistenciaSQL
 import com.example.apptransporte.databinding.ActivityPrincipalBinding
 
-class PrincipalActivity: AppCompatActivity() {
+class PrincipalActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPrincipalBinding
+    private lateinit var conexao: SQLiteDatabase
+    private lateinit var db: Database
+    private lateinit var persistencia: PersistenciaSQL
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,9 +29,32 @@ class PrincipalActivity: AppCompatActivity() {
             insets
         }
         abrirCadastrarReservaActivity()
-        val db=DataBase(this)
-        val list=db.getQueryDataForArray()
-        binding.listviewprincipalpassageiro.adapter=ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, list)
+
+        try {
+            db = Database(this)
+            conexao = db.writableDatabase // Use writableDatabase para inserir dados
+            persistencia = PersistenciaSQL(conexao)
+
+            // Recupera os dados
+            val seleciona = persistencia.selectPassageiro()
+
+            // Cria um ArrayAdapter para o ListView
+            val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, seleciona)
+
+            // Define o ArrayAdapter como adaptador do ListView
+            binding.listviewprincipalpassageiro.adapter = adapter
+
+            // Exibe o dado    no rodapé
+            if (seleciona.isNotEmpty()) {
+                //binding.textViewRodape.text = seleciona[0].toString() // Exibe o primeiro da lista
+            } else {
+                binding.textViewRodape.text = "Erro"
+            }
+
+        } catch (e: Exception) {
+            // Trata erros de acesso ao banco de dados
+            binding.textViewRodape.text = "Erro ao conectar ao banco de dados"
+        }
     }
 
     private fun abrirCadastrarReservaActivity() {
@@ -33,6 +62,4 @@ class PrincipalActivity: AppCompatActivity() {
             startActivity(Intent(this, CadastrarReservaActivity::class.java))
         }
     }
-
-
 }

@@ -1,15 +1,22 @@
 package com.example.apptransporte
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.apptransporte.database.Database
+import com.example.apptransporte.database.PersistenciaSQL
 import com.example.apptransporte.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var conexao: SQLiteDatabase
+    private lateinit var db: Database
+    private lateinit var persistencia: PersistenciaSQL
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,7 +27,18 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         abrirPrincipalActivity()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Cria o objeto Database e a conexão aqui
+        db = Database(this)
+        conexao = db.writableDatabase
+
+        // Inicia o PersistenciaSQL
+        persistencia = PersistenciaSQL(conexao)
     }
 
     private fun abrirPrincipalActivity() {
