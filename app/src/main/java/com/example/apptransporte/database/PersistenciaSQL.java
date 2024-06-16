@@ -61,6 +61,17 @@ public class PersistenciaSQL {
         return passageiro;
     }
 
+    //Insere reserva
+    public void putReserva(String dataReserva, String embarqueReserva, String desembarqueReserva, int idPassageiroFK, int idUniversidadeFK){
+        ContentValues insert = new ContentValues();
+        insert.put("dataReserva", dataReserva);
+        insert.put("embarqueReserva", embarqueReserva);
+        insert.put("desembarqueReserva", desembarqueReserva);
+        insert.put("idPassageiroFK", idPassageiroFK);
+        insert.put("idUniversidadeFK", idUniversidadeFK);
+        conexao.insert("Reserva", null, insert);
+    }
+
     // Retorna uma lista de registro de Reservas
     public ArrayList<Reserva> selectReserva(){
         ArrayList<Reserva> reserva = new ArrayList<>();

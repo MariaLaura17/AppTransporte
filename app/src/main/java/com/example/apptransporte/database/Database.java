@@ -45,7 +45,8 @@ public class Database extends SQLiteOpenHelper {
         scriptSQL.append("telefonePassageiro VARCHAR (18) NOT NULL, ");
         scriptSQL.append("enderecoPassageiro VARCHAR (100) NOT NULL, ");
         scriptSQL.append("idUniversidadeFk INTEGER NOT NULL, ");
-        scriptSQL.append("senhaPassageiro VARCHAR (64) NOT NULL ");
+        scriptSQL.append("senhaPassageiro VARCHAR (64) NOT NULL, ");
+        scriptSQL.append("FOREIGN KEY (idUniversidadeFK) REFERENCES Universidade(idUniversidade) ");
         scriptSQL.append(") ");
         return scriptSQL.toString();
     }
@@ -68,20 +69,8 @@ public class Database extends SQLiteOpenHelper {
 
     // Método para inserir dados de teste na tabela Universidade
     private void insereDadosTeste(SQLiteDatabase db) {
-        //inserção de passageiro
-        ContentValues valores = new ContentValues();
-        valores.put("cpfPassageiro", "123");
-        valores.put("nomePassageiro", "Pedro");
-        valores.put("emailPassageiro", "p@email.com");
-        valores.put("telefonePassageiro", "08768433");
-        valores.put("enderecoPassageiro", "rua 1, n3, bairro x");
-        valores.put("idUniversidadeFk", 1);
-        valores.put("senhaPassageiro", "34f8senha");
-        db.insert("Passageiro", null, valores);
-
-
         // Insere a primeira universidade
-        valores = new ContentValues();
+        ContentValues valores = new ContentValues();
         valores.put("nomeUniversidade", "Universidade Federal do Rio Grande do Sul");
         db.insert("Universidade", null, valores);
 
@@ -89,6 +78,28 @@ public class Database extends SQLiteOpenHelper {
         valores = new ContentValues();
         valores.put("nomeUniversidade", "Universidade de São Paulo");
         db.insert("Universidade", null, valores);
+
+
+        //inserção de passageiro
+        valores = new ContentValues();
+        valores.put("cpfPassageiro", "12312312312");
+        valores.put("nomePassageiro", "Pedro");
+        valores.put("emailPassageiro", "p@email.com");
+        valores.put("telefonePassageiro", "08768433");
+        valores.put("enderecoPassageiro", "rua 1, n3, bairro x");
+        valores.put("idUniversidadeFk", 1);
+        valores.put("senhaPassageiro", "1234");
+        db.insert("Passageiro", null, valores);
+
+        valores = new ContentValues();
+        valores.put("cpfPassageiro", "78978978978");
+        valores.put("nomePassageiro", "João da Silva");
+        valores.put("emailPassageiro", "joaodasilva@email.com");
+        valores.put("telefonePassageiro", "37999000001");
+        valores.put("enderecoPassageiro", "rua 3, n 30, bairro alto, Arcos");
+        valores.put("idUniversidadeFk", 1);
+        valores.put("senhaPassageiro", "0000");
+        db.insert("Passageiro", null, valores);
 
         //Inserção de Reserva
         valores = new ContentValues();

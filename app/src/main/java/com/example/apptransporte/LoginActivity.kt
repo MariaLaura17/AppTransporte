@@ -27,24 +27,22 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        conectaDatabase()
         abrirPrincipalActivity()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        // Cria o objeto Database e a conexão aqui
-        db = Database(this)
-        conexao = db.writableDatabase
-
-        // Inicia o PersistenciaSQL
-        persistencia = PersistenciaSQL(conexao)
     }
 
     private fun abrirPrincipalActivity() {
         binding.buttonLogin.setOnClickListener {
+            val seleciona = persistencia.selectPassageiro()
+            val cpf: String=seleciona.get(0).cpf
             startActivity(Intent(this, PrincipalActivity::class.java))
             finish()
         }
+    }
+
+    private fun conectaDatabase() {
+        db = Database(this)
+        conexao = db.writableDatabase // Use writableDatabase para inserir dados
+        persistencia = PersistenciaSQL(conexao)
     }
 }

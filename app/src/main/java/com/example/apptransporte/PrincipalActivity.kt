@@ -31,30 +31,28 @@ class PrincipalActivity : AppCompatActivity() {
         abrirCadastrarReservaActivity()
 
         try {
-            db = Database(this)
-            conexao = db.writableDatabase // Use writableDatabase para inserir dados
-            persistencia = PersistenciaSQL(conexao)
+            conectaDatabase()
 
-            // Recupera os dados
-            val seleciona = persistencia.selectReserva()
+            //aqui se tem que recuperar cpf
+            val seleciona = persistencia.selectPassageiro()
+            val cpf: String=seleciona.get(1).cpf
+            binding.textViewRodape.text=cpf
 
             // Cria um ArrayAdapter para o ListView
             val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, seleciona)
 
             // Define o ArrayAdapter como adaptador do ListView
             binding.listviewprincipalpassageiro.adapter = adapter
-
-            // Exibe o dado    no rodapé
-            if (seleciona.isNotEmpty()) {
-                //binding.textViewRodape.text = seleciona[0].toString() // Exibe o primeiro da lista
-            } else {
-                binding.textViewRodape.text = "Erro"
-            }
-
         } catch (e: Exception) {
             // Trata erros de acesso ao banco de dados
             binding.textViewRodape.text = "Erro ao conectar ao banco de dados"
         }
+    }
+
+    private fun conectaDatabase() {
+        db = Database(this)
+        conexao = db.writableDatabase // Use writableDatabase para inserir dados
+        persistencia = PersistenciaSQL(conexao)
     }
 
     private fun abrirCadastrarReservaActivity() {
