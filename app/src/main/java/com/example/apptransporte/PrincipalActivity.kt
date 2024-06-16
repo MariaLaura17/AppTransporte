@@ -36,7 +36,7 @@ class PrincipalActivity : AppCompatActivity() {
             persistencia = PersistenciaSQL(conexao)
 
             // Recupera os dados
-            val seleciona = persistencia.selectPassageiro()
+            val seleciona = persistencia.selectReserva()
 
             // Cria um ArrayAdapter para o ListView
             val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, seleciona)

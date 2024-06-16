@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.apptransporte.model.Passageiro;
+import com.example.apptransporte.model.Reserva;
 import com.example.apptransporte.model.Universidade;
 
 import java.util.ArrayList;
@@ -58,6 +59,26 @@ public class PersistenciaSQL {
             } while (consulta.moveToNext());
         }
         return passageiro;
+    }
+
+    // Retorna uma lista de registro de Reservas
+    public ArrayList<Reserva> selectReserva(){
+        ArrayList<Reserva> reserva = new ArrayList<>();
+        String select = "SELECT * FROM Reserva";
+        Cursor consulta = conexao.rawQuery(select, null);
+
+        if (consulta.moveToFirst()){
+            do {
+                int idReserva=consulta.getInt(0);
+                String dataReserva=consulta.getString(1);
+                String embarqueReserva=consulta.getString(2);
+                String desembarqueReserva=consulta.getString(3);
+                int idPassageiroFK=consulta.getInt(4);
+                int idUniversidadeFK=consulta.getInt(5);
+                reserva.add(new Reserva(idReserva, dataReserva, embarqueReserva, desembarqueReserva, idPassageiroFK, idUniversidadeFK));
+            } while (consulta.moveToNext());
+        }
+        return reserva;
     }
 
 }

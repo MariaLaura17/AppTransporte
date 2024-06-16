@@ -2,10 +2,8 @@ package com.example.apptransporte.database;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import java.util.ArrayList;
 
 public class Database extends SQLiteOpenHelper {
     public Database (Context context){
@@ -15,7 +13,8 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db){
         db.execSQL(createTableUniversidade());
-        db.execSQL(createPassageiro());
+        db.execSQL(createTablePassageiro());
+        db.execSQL(createTableReserva());
 
         // Insere dados de teste aqui
         insereDadosTeste(db);
@@ -36,7 +35,7 @@ public class Database extends SQLiteOpenHelper {
         return scriptSQL.toString();
     }
 
-    public static String createPassageiro(){
+    public static String createTablePassageiro(){
         StringBuilder scriptSQL = new StringBuilder();
         scriptSQL.append("CREATE TABLE IF NOT EXISTS Passageiro( ");
         scriptSQL.append("idPassageiro INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, ");
@@ -50,6 +49,22 @@ public class Database extends SQLiteOpenHelper {
         scriptSQL.append(") ");
         return scriptSQL.toString();
     }
+
+    public static String createTableReserva(){
+        StringBuilder scriptSQL = new StringBuilder();
+        scriptSQL.append("CREATE TABLE IF NOT EXISTS Reserva( ");
+        scriptSQL.append("idReserva INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, ");
+        scriptSQL.append("dataReserva VARCHAR (20) NOT NULL, ");
+        scriptSQL.append("embarqueReserva VARCHAR (30) NOT NULL, ");
+        scriptSQL.append("desembarqueReserva VARCHAR (30) NOT NULL, ");
+        scriptSQL.append("idPassageiroFK INTEGER NOT NULL, ");
+        scriptSQL.append("idUniversidadeFK INTEGER NOT NULL, ");
+        scriptSQL.append("FOREIGN KEY (idPassageiroFK) REFERENCES Passageiro(idPassageiro), ");
+        scriptSQL.append("FOREIGN KEY (idUniversidadeFK) REFERENCES Universidade(idUniversidade) ");
+        scriptSQL.append(") ");
+        return scriptSQL.toString();
+    }
+
 
     // Método para inserir dados de teste na tabela Universidade
     private void insereDadosTeste(SQLiteDatabase db) {
@@ -75,5 +90,13 @@ public class Database extends SQLiteOpenHelper {
         valores.put("nomeUniversidade", "Universidade de São Paulo");
         db.insert("Universidade", null, valores);
 
+        //Inserção de Reserva
+        valores = new ContentValues();
+        valores.put("dataReserva", "segunda-feira");
+        valores.put("embarqueReserva", "Ponto 1");
+        valores.put("desembarqueReserva", "casa");
+        valores.put("idPassageiroFK", 1);
+        valores.put("idUniversidadeFK", 1);
+        db.insert("Reserva", null, valores);
     }
 }

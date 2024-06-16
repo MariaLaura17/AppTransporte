@@ -28,9 +28,10 @@ class CadastrarReservaActivity : AppCompatActivity() {
 
 
         binding.buttonEnviar.setOnClickListener {
-/*            if (binding.checkBoxSegunda.isChecked){
+            /*            if (binding.checkBoxSegunda.isChecked){
             //val agenda = Agenda()
             }*/
+
         }
     }
 }
