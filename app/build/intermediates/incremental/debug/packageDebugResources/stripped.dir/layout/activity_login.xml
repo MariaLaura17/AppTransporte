@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5BCFA"
+    tools:context=".LoginActivity">
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="94dp"
+        android:background="#614B99"
+        android:text="Entrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/editTextUsuario"
+        android:layout_width="223dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="Digite seu CPF"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="226dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="Digite a sua senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTipoUsuario"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsuario" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUsuario"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsuario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red_yellow_simple_tour_bus_rental_travel_logo" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="151dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTipoUsuario">
+
+        <RadioButton
+            android:id="@+id/radioButtonAdm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administrador"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPassageiro"
+            android:layout_width="137dp"
+            android:layout_height="60dp"
+            android:text="Passageiro"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewTipoUsuario"
+        android:layout_width="179dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Selecione o tipo de usuário:"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,10 +33,29 @@ class LoginActivity : AppCompatActivity() {
 
     private fun abrirPrincipalActivity() {
         binding.buttonLogin.setOnClickListener {
-            val seleciona = persistencia.selectPassageiro()
-            val cpf: String=seleciona.get(0).cpf
-            startActivity(Intent(this, PrincipalActivity::class.java))
-            finish()
+
+
+            if (binding.radioButtonAdm.isChecked){
+                val seleciona = persistencia.selectAdministrador()
+                val cpfConsulta: String=seleciona.get(0).cpfAdministrador
+                val cpfDigitado: String=binding.editTextUsuario.text.toString()
+                val senhaConsulta: String=seleciona.get(0).senhaAdministrador
+                val senhaDigitada: String=binding.editTextPassword.text.toString()
+                if (cpfDigitado==cpfConsulta && senhaDigitada==senhaConsulta){
+                    startActivity(Intent(this, AdmPrincipalActivity::class.java))
+                    finish()
+                }
+            }else if (binding.radioButtonPassageiro.isChecked){
+                val seleciona = persistencia.selectPassageiro()
+                val cpfConsulta: String=seleciona.get(0).cpf
+                val cpfDigitado: String=binding.editTextUsuario.text.toString()
+                val senhaConsulta: String=seleciona.get(0).senha
+                val senhaDigitada: String=binding.editTextPassword.text.toString()
+                if (cpfDigitado==cpfConsulta && senhaDigitada==senhaConsulta){
+                    startActivity(Intent(this, PrincipalActivity::class.java))
+                    finish()
+                }
+            }
         }
     }
 

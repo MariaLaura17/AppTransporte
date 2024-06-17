@@ -15,6 +15,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(createTableUniversidade());
         db.execSQL(createTablePassageiro());
         db.execSQL(createTableReserva());
+        db.execSQL(createTableAdministrador());
 
         // Insere dados de teste aqui
         insereDadosTeste(db);
@@ -47,6 +48,19 @@ public class Database extends SQLiteOpenHelper {
         scriptSQL.append("idUniversidadeFk INTEGER NOT NULL, ");
         scriptSQL.append("senhaPassageiro VARCHAR (64) NOT NULL, ");
         scriptSQL.append("FOREIGN KEY (idUniversidadeFK) REFERENCES Universidade(idUniversidade) ");
+        scriptSQL.append(") ");
+        return scriptSQL.toString();
+    }
+
+    public static String createTableAdministrador(){
+        StringBuilder        scriptSQL=new StringBuilder();
+        scriptSQL.append("CREATE TABLE IF NOT EXISTS Administrador( ");
+        scriptSQL.append("idAdministrador INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, ");
+        scriptSQL.append("cpfAdministrador VARCHAR (15) NOT NULL UNIQUE, ");
+        scriptSQL.append("nomeAdministrador VARCHAR (80) NOT NULL, ");
+        scriptSQL.append("emailAdministrador VARCHAR (50) NOT NULL, ");
+        scriptSQL.append("telefoneAdministrador VARCHAR (18) NOT NULL, ");
+        scriptSQL.append("senhaAdministrador VARCHAR (64) NOT NULL ");
         scriptSQL.append(") ");
         return scriptSQL.toString();
     }
@@ -109,5 +123,14 @@ public class Database extends SQLiteOpenHelper {
         valores.put("idPassageiroFK", 1);
         valores.put("idUniversidadeFK", 1);
         db.insert("Reserva", null, valores);
+
+        //Criação de administrador
+        valores=new ContentValues();
+        valores.put("cpfAdministrador", "12312312312");
+        valores.put("nomeAdministrador", "Roberto Duque");
+        valores.put("emailAdministrador", "robertoduque@email.com");
+        valores.put("telefoneAdministrador", "37999999900");
+        valores.put("senhaAdministrador", "admin");
+        db.insert("Administrador", null, valores);
     }
 }

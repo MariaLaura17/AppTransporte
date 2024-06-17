@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.apptransporte.model.Administrador;
 import com.example.apptransporte.model.Passageiro;
 import com.example.apptransporte.model.Reserva;
 import com.example.apptransporte.model.Universidade;
@@ -37,6 +38,26 @@ public class PersistenciaSQL {
             } while (consulta.moveToNext());
         }
         return universidade;
+    }
+
+    //Consulta administradores
+    public ArrayList<Administrador> selectAdministrador(){
+        ArrayList<Administrador> administrador = new ArrayList<>();
+        String select = "SELECT * FROM Administrador";
+        Cursor consulta = conexao.rawQuery(select, null);
+
+        if (consulta.moveToFirst()){
+            do {
+                int idAdministrador=consulta.getInt(0);
+                String cpfAdministrador=consulta.getString(1);
+                String nomeAdministrador=consulta.getString(2);
+                String emailAdministrador=consulta.getString(3);
+                String telefoneAdministrador=consulta.getString(4);
+                String senhaAdministrador=consulta.getString(5);
+                administrador.add(new Administrador(idAdministrador, cpfAdministrador, nomeAdministrador, emailAdministrador, telefoneAdministrador, senhaAdministrador));
+            } while (consulta.moveToNext());
+        }
+        return administrador;
     }
 
     // Retorna uma lista de nomes dos passageiros
