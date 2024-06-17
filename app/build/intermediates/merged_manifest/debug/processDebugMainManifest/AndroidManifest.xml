@@ -28,6 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Apptransporte" >
         <activity
+            android:name="com.example.apptransporte.RelatorioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.apptransporte.AdmPrincipalActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.apptransporte.PrincipalActivity"
             android:exported="false" />
         <activity

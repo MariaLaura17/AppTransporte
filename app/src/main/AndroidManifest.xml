@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Apptransporte"
         tools:targetApi="31">
-
+        <activity
+            android:name=".RelatorioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdmPrincipalActivity"
+            android:exported="false" />
         <activity
             android:name=".PrincipalActivity"
             android:exported="false" />
@@ -28,8 +33,6 @@
         <activity
             android:name=".CadastrarReservaActivity"
             android:exported="true" />
-
-
     </application>
 
 </manifest>

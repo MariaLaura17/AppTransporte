@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CBD5EA"
+    android:background="#C5BCFA"
     tools:context=".CadastrarReservaActivity">
 
     <TextView
@@ -30,8 +30,8 @@
 
     <CheckBox
         android:id="@+id/checkBox_Segunda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="91dp"
         android:layout_marginBottom="91dp"
@@ -68,8 +68,8 @@
 
     <CheckBox
         android:id="@+id/checkBox_Terca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="62dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="118dp"
         android:layout_marginBottom="118dp"
@@ -80,8 +80,8 @@
 
     <CheckBox
         android:id="@+id/checkBox_Quarta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="63dp"
         android:text="Quarta-Feira"
@@ -90,8 +90,8 @@
 
     <CheckBox
         android:id="@+id/checkBox_Quinta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:text="Quinta-Feira"
@@ -100,8 +100,8 @@
 
     <CheckBox
         android:id="@+id/checkBox_Sexta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:layout_marginBottom="83dp"

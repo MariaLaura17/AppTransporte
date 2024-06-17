@@ -1,34 +1,34 @@
-com.example.apptransporte.app-lifecycle-process-2.6.1-0 C:\Users\pedro\.gradle\caches\transforms-4\03249a24d7c74e258b6e5ace799c9be0\transformed\lifecycle-process-2.6.1\res
-com.example.apptransporte.app-drawerlayout-1.1.1-1 C:\Users\pedro\.gradle\caches\transforms-4\03af5ce211be903ca28840a7f72e010b\transformed\drawerlayout-1.1.1\res
-com.example.apptransporte.app-lifecycle-runtime-2.6.1-2 C:\Users\pedro\.gradle\caches\transforms-4\06efb7941cbf7ee9d6da509bc840dbea\transformed\lifecycle-runtime-2.6.1\res
-com.example.apptransporte.app-core-runtime-2.2.0-3 C:\Users\pedro\.gradle\caches\transforms-4\0dc36395d29866839cd9b1933dbc1619\transformed\core-runtime-2.2.0\res
-com.example.apptransporte.app-constraintlayout-2.1.4-4 C:\Users\pedro\.gradle\caches\transforms-4\0fb3108b3025993b4a78d472cabb24e6\transformed\constraintlayout-2.1.4\res
-com.example.apptransporte.app-profileinstaller-1.3.0-5 C:\Users\pedro\.gradle\caches\transforms-4\10e28aa27b9f73b3ec5caf13370a9aed\transformed\profileinstaller-1.3.0\res
-com.example.apptransporte.app-startup-runtime-1.1.1-6 C:\Users\pedro\.gradle\caches\transforms-4\15cdc22f08f73036603c3ae101d00578\transformed\startup-runtime-1.1.1\res
-com.example.apptransporte.app-recyclerview-1.1.0-7 C:\Users\pedro\.gradle\caches\transforms-4\1e0ac3c9afd16e792bfaee526525ac67\transformed\recyclerview-1.1.0\res
-com.example.apptransporte.app-emoji2-1.2.0-8 C:\Users\pedro\.gradle\caches\transforms-4\1f9ad9cdfd440f8a4c62860cb72a9bb7\transformed\emoji2-1.2.0\res
-com.example.apptransporte.app-fragment-1.3.6-9 C:\Users\pedro\.gradle\caches\transforms-4\3022b8fbb3e4aff87aa1c0d4f52f12b5\transformed\fragment-1.3.6\res
-com.example.apptransporte.app-appcompat-resources-1.6.1-10 C:\Users\pedro\.gradle\caches\transforms-4\3bf71759eaf928f66926ed02834740e7\transformed\appcompat-resources-1.6.1\res
-com.example.apptransporte.app-activity-1.8.0-11 C:\Users\pedro\.gradle\caches\transforms-4\463e708ebd78bed54a100a0d945fa7fd\transformed\activity-1.8.0\res
-com.example.apptransporte.app-coordinatorlayout-1.1.0-12 C:\Users\pedro\.gradle\caches\transforms-4\602abcd8b6e3c999b79766f5da89b810\transformed\coordinatorlayout-1.1.0\res
-com.example.apptransporte.app-lifecycle-viewmodel-savedstate-2.6.1-13 C:\Users\pedro\.gradle\caches\transforms-4\619e72fffe336cba6112e602ed58d1f9\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
-com.example.apptransporte.app-appcompat-1.6.1-14 C:\Users\pedro\.gradle\caches\transforms-4\683a39a73a951290bf55e4a54ed32570\transformed\appcompat-1.6.1\res
-com.example.apptransporte.app-core-ktx-1.10.1-15 C:\Users\pedro\.gradle\caches\transforms-4\703d00db2e490ed8a36eb02f52994e49\transformed\core-ktx-1.10.1\res
-com.example.apptransporte.app-lifecycle-livedata-2.6.1-16 C:\Users\pedro\.gradle\caches\transforms-4\799bdaa36ef1b3bb77da71e8f8016f19\transformed\lifecycle-livedata-2.6.1\res
-com.example.apptransporte.app-transition-1.2.0-17 C:\Users\pedro\.gradle\caches\transforms-4\add9d16ca5e2d2186548d312b3a69068\transformed\transition-1.2.0\res
-com.example.apptransporte.app-lifecycle-livedata-core-2.6.1-18 C:\Users\pedro\.gradle\caches\transforms-4\ae89d63e447b8a817f7c1f2445eb4056\transformed\lifecycle-livedata-core-2.6.1\res
-com.example.apptransporte.app-annotation-experimental-1.3.0-19 C:\Users\pedro\.gradle\caches\transforms-4\b4db382562c17c423e194c1d2a22aede\transformed\annotation-experimental-1.3.0\res
-com.example.apptransporte.app-savedstate-1.2.1-20 C:\Users\pedro\.gradle\caches\transforms-4\b5d778ed725d13e9c4e9de58fd82cb7c\transformed\savedstate-1.2.1\res
-com.example.apptransporte.app-emoji2-views-helper-1.2.0-21 C:\Users\pedro\.gradle\caches\transforms-4\cad0e32e005a3ff373d00c7cd1e939cd\transformed\emoji2-views-helper-1.2.0\res
-com.example.apptransporte.app-cardview-1.0.0-22 C:\Users\pedro\.gradle\caches\transforms-4\df27b76fb749446c20e9252129d3bee4\transformed\cardview-1.0.0\res
-com.example.apptransporte.app-core-1.10.1-23 C:\Users\pedro\.gradle\caches\transforms-4\f478cf7a0bea346f019da41249921bc6\transformed\core-1.10.1\res
-com.example.apptransporte.app-material-1.10.0-24 C:\Users\pedro\.gradle\caches\transforms-4\fcc53d891350d3f75d508d935199809d\transformed\material-1.10.0\res
-com.example.apptransporte.app-viewpager2-1.0.0-25 C:\Users\pedro\.gradle\caches\transforms-4\fd174abf4953e3dde8db3e817aec0b9f\transformed\viewpager2-1.0.0\res
-com.example.apptransporte.app-lifecycle-viewmodel-2.6.1-26 C:\Users\pedro\.gradle\caches\transforms-4\ffa1f7274472abd6c9c9bf6a6c0ab602\transformed\lifecycle-viewmodel-2.6.1\res
-com.example.apptransporte.app-pngs-27 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\build\generated\res\pngs\debug
-com.example.apptransporte.app-resValues-28 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\build\generated\res\resValues\debug
-com.example.apptransporte.app-packageDebugResources-29 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.apptransporte.app-packageDebugResources-30 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.apptransporte.app-debug-31 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.apptransporte.app-debug-32 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\src\debug\res
-com.example.apptransporte.app-main-33 C:\Users\pedro\AndroidStudioProjects\A3\c\AppTransporte\app\src\main\res
+com.example.apptransporte.app-lifecycle-process-2.6.1-0 C:\Users\USUARIO\.gradle\caches\transforms-4\03249a24d7c74e258b6e5ace799c9be0\transformed\lifecycle-process-2.6.1\res
+com.example.apptransporte.app-drawerlayout-1.1.1-1 C:\Users\USUARIO\.gradle\caches\transforms-4\03af5ce211be903ca28840a7f72e010b\transformed\drawerlayout-1.1.1\res
+com.example.apptransporte.app-lifecycle-runtime-2.6.1-2 C:\Users\USUARIO\.gradle\caches\transforms-4\06efb7941cbf7ee9d6da509bc840dbea\transformed\lifecycle-runtime-2.6.1\res
+com.example.apptransporte.app-core-runtime-2.2.0-3 C:\Users\USUARIO\.gradle\caches\transforms-4\0dc36395d29866839cd9b1933dbc1619\transformed\core-runtime-2.2.0\res
+com.example.apptransporte.app-constraintlayout-2.1.4-4 C:\Users\USUARIO\.gradle\caches\transforms-4\0fb3108b3025993b4a78d472cabb24e6\transformed\constraintlayout-2.1.4\res
+com.example.apptransporte.app-profileinstaller-1.3.0-5 C:\Users\USUARIO\.gradle\caches\transforms-4\10e28aa27b9f73b3ec5caf13370a9aed\transformed\profileinstaller-1.3.0\res
+com.example.apptransporte.app-startup-runtime-1.1.1-6 C:\Users\USUARIO\.gradle\caches\transforms-4\15cdc22f08f73036603c3ae101d00578\transformed\startup-runtime-1.1.1\res
+com.example.apptransporte.app-recyclerview-1.1.0-7 C:\Users\USUARIO\.gradle\caches\transforms-4\1e0ac3c9afd16e792bfaee526525ac67\transformed\recyclerview-1.1.0\res
+com.example.apptransporte.app-emoji2-1.2.0-8 C:\Users\USUARIO\.gradle\caches\transforms-4\1f9ad9cdfd440f8a4c62860cb72a9bb7\transformed\emoji2-1.2.0\res
+com.example.apptransporte.app-fragment-1.3.6-9 C:\Users\USUARIO\.gradle\caches\transforms-4\3022b8fbb3e4aff87aa1c0d4f52f12b5\transformed\fragment-1.3.6\res
+com.example.apptransporte.app-appcompat-resources-1.6.1-10 C:\Users\USUARIO\.gradle\caches\transforms-4\3bf71759eaf928f66926ed02834740e7\transformed\appcompat-resources-1.6.1\res
+com.example.apptransporte.app-activity-1.8.0-11 C:\Users\USUARIO\.gradle\caches\transforms-4\463e708ebd78bed54a100a0d945fa7fd\transformed\activity-1.8.0\res
+com.example.apptransporte.app-coordinatorlayout-1.1.0-12 C:\Users\USUARIO\.gradle\caches\transforms-4\602abcd8b6e3c999b79766f5da89b810\transformed\coordinatorlayout-1.1.0\res
+com.example.apptransporte.app-lifecycle-viewmodel-savedstate-2.6.1-13 C:\Users\USUARIO\.gradle\caches\transforms-4\619e72fffe336cba6112e602ed58d1f9\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.example.apptransporte.app-appcompat-1.6.1-14 C:\Users\USUARIO\.gradle\caches\transforms-4\683a39a73a951290bf55e4a54ed32570\transformed\appcompat-1.6.1\res
+com.example.apptransporte.app-core-ktx-1.10.1-15 C:\Users\USUARIO\.gradle\caches\transforms-4\703d00db2e490ed8a36eb02f52994e49\transformed\core-ktx-1.10.1\res
+com.example.apptransporte.app-lifecycle-livedata-2.6.1-16 C:\Users\USUARIO\.gradle\caches\transforms-4\799bdaa36ef1b3bb77da71e8f8016f19\transformed\lifecycle-livedata-2.6.1\res
+com.example.apptransporte.app-transition-1.2.0-17 C:\Users\USUARIO\.gradle\caches\transforms-4\add9d16ca5e2d2186548d312b3a69068\transformed\transition-1.2.0\res
+com.example.apptransporte.app-lifecycle-livedata-core-2.6.1-18 C:\Users\USUARIO\.gradle\caches\transforms-4\ae89d63e447b8a817f7c1f2445eb4056\transformed\lifecycle-livedata-core-2.6.1\res
+com.example.apptransporte.app-annotation-experimental-1.3.0-19 C:\Users\USUARIO\.gradle\caches\transforms-4\b4db382562c17c423e194c1d2a22aede\transformed\annotation-experimental-1.3.0\res
+com.example.apptransporte.app-savedstate-1.2.1-20 C:\Users\USUARIO\.gradle\caches\transforms-4\b5d778ed725d13e9c4e9de58fd82cb7c\transformed\savedstate-1.2.1\res
+com.example.apptransporte.app-emoji2-views-helper-1.2.0-21 C:\Users\USUARIO\.gradle\caches\transforms-4\cad0e32e005a3ff373d00c7cd1e939cd\transformed\emoji2-views-helper-1.2.0\res
+com.example.apptransporte.app-cardview-1.0.0-22 C:\Users\USUARIO\.gradle\caches\transforms-4\df27b76fb749446c20e9252129d3bee4\transformed\cardview-1.0.0\res
+com.example.apptransporte.app-core-1.10.1-23 C:\Users\USUARIO\.gradle\caches\transforms-4\f478cf7a0bea346f019da41249921bc6\transformed\core-1.10.1\res
+com.example.apptransporte.app-material-1.10.0-24 C:\Users\USUARIO\.gradle\caches\transforms-4\fcc53d891350d3f75d508d935199809d\transformed\material-1.10.0\res
+com.example.apptransporte.app-viewpager2-1.0.0-25 C:\Users\USUARIO\.gradle\caches\transforms-4\fd174abf4953e3dde8db3e817aec0b9f\transformed\viewpager2-1.0.0\res
+com.example.apptransporte.app-lifecycle-viewmodel-2.6.1-26 C:\Users\USUARIO\.gradle\caches\transforms-4\ffa1f7274472abd6c9c9bf6a6c0ab602\transformed\lifecycle-viewmodel-2.6.1\res
+com.example.apptransporte.app-pngs-27 D:\Trabalho A3\AppTransporte\app\build\generated\res\pngs\debug
+com.example.apptransporte.app-resValues-28 D:\Trabalho A3\AppTransporte\app\build\generated\res\resValues\debug
+com.example.apptransporte.app-packageDebugResources-29 D:\Trabalho A3\AppTransporte\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.apptransporte.app-packageDebugResources-30 D:\Trabalho A3\AppTransporte\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.apptransporte.app-debug-31 D:\Trabalho A3\AppTransporte\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.apptransporte.app-debug-32 D:\Trabalho A3\AppTransporte\app\src\debug\res
+com.example.apptransporte.app-main-33 D:\Trabalho A3\AppTransporte\app\src\main\res

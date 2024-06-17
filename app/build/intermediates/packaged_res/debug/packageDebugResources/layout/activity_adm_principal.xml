@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5BCFA"
+    tools:context=".AdmPrincipalActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="477dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="65dp"
+        android:background="#8C80F3"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSelecione"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewBoasVindas"
+            android:layout_width="421dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Seja bem vindo!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="451dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginBottom="68dp"
+        android:background="#8C80F3"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewMensagemResumo"
+            android:layout_width="415dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Relatorio das suas viagens:"
+            android:textAlignment="center"
+            android:textColor="#070042"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+        <RadioButton
+            android:id="@+id/radioButtonSegunda"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Segunda-feira" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTerça"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Terça-feira" />
+
+        <RadioButton
+            android:id="@+id/radioButtonQuarta"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Quarta-feira" />
+
+        <RadioButton
+            android:id="@+id/radioButtonQuinta"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Quinta-feira" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSexta"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Sexta-feira" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewSelecione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione o dia para gerar o relatório"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup4"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/buttonRelatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:text="Gerar Relatório"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -36,15 +39,33 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout main;
 
+  @NonNull
+  public final RadioButton radioButtonAdm;
+
+  @NonNull
+  public final RadioButton radioButtonPassageiro;
+
+  @NonNull
+  public final RadioGroup radioGroup;
+
+  @NonNull
+  public final TextView textViewTipoUsuario;
+
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
       @NonNull EditText editTextPassword, @NonNull EditText editTextUsuario,
-      @NonNull ImageView imageView, @NonNull ConstraintLayout main) {
+      @NonNull ImageView imageView, @NonNull ConstraintLayout main,
+      @NonNull RadioButton radioButtonAdm, @NonNull RadioButton radioButtonPassageiro,
+      @NonNull RadioGroup radioGroup, @NonNull TextView textViewTipoUsuario) {
     this.rootView = rootView;
     this.buttonLogin = buttonLogin;
     this.editTextPassword = editTextPassword;
     this.editTextUsuario = editTextUsuario;
     this.imageView = imageView;
     this.main = main;
+    this.radioButtonAdm = radioButtonAdm;
+    this.radioButtonPassageiro = radioButtonPassageiro;
+    this.radioGroup = radioGroup;
+    this.textViewTipoUsuario = textViewTipoUsuario;
   }
 
   @Override
@@ -100,8 +121,33 @@ public final class ActivityLoginBinding implements ViewBinding {
 
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.radioButtonAdm;
+      RadioButton radioButtonAdm = ViewBindings.findChildViewById(rootView, id);
+      if (radioButtonAdm == null) {
+        break missingId;
+      }
+
+      id = R.id.radioButtonPassageiro;
+      RadioButton radioButtonPassageiro = ViewBindings.findChildViewById(rootView, id);
+      if (radioButtonPassageiro == null) {
+        break missingId;
+      }
+
+      id = R.id.radioGroup;
+      RadioGroup radioGroup = ViewBindings.findChildViewById(rootView, id);
+      if (radioGroup == null) {
+        break missingId;
+      }
+
+      id = R.id.textViewTipoUsuario;
+      TextView textViewTipoUsuario = ViewBindings.findChildViewById(rootView, id);
+      if (textViewTipoUsuario == null) {
+        break missingId;
+      }
+
       return new ActivityLoginBinding((ConstraintLayout) rootView, buttonLogin, editTextPassword,
-          editTextUsuario, imageView, main);
+          editTextUsuario, imageView, main, radioButtonAdm, radioButtonPassageiro, radioGroup,
+          textViewTipoUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2941,6 +2941,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_chevron_left_24
+drawable baseline_edit_calendar_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3047,6 +3049,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable red_yellow_simple_tour_bus_rental_travel_logo
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3150,6 +3153,7 @@ id bounceEnd
 id bounceStart
 id buttonLogin
 id buttonPanel
+id buttonRelatorio
 id button_Enviar
 id cache_measures
 id callMeasure
@@ -3254,6 +3258,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id floatingActionButton
 id forever
 id fragment_container_view_tag
 id frameLayout
@@ -3301,6 +3306,7 @@ id line3
 id linear
 id linearLayout
 id listMode
+id listView
 id list_item
 id listviewprincipalpassageiro
 id m3_side_sheet
@@ -3420,6 +3426,15 @@ id pressed
 id progress_circular
 id progress_horizontal
 id radio
+id radioButtonAdm
+id radioButtonPassageiro
+id radioButtonQuarta
+id radioButtonQuinta
+id radioButtonSegunda
+id radioButtonSexta
+id radioButtonTerça
+id radioGroup
+id radioGroup4
 id ratio
 id rectangles
 id report_drawn
@@ -3527,6 +3542,9 @@ id textViewBoasVindas
 id textViewMensagemResumo
 id textViewRelatório
 id textViewRodape
+id textViewSelecione
+id textViewTipoUsuario
+id textViewTitulo
 id textView_TituloReserva
 id text_input_end_icon
 id text_input_error_icon
@@ -3690,9 +3708,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_adm_principal
 layout activity_cadastrar_reserva
 layout activity_login
 layout activity_principal
+layout activity_relatorio
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

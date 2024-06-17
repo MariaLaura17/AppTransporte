@@ -1,14 +1,26 @@
 [
     {
-        "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_login.xml",
-        "source": "com.example.apptransporte.app-main-33:/layout/activity_login.xml"
+        "merged": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_principal.xml",
-        "source": "com.example.apptransporte.app-main-33:/layout/activity_principal.xml"
+        "merged": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_adm_principal.xml",
+        "source": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_adm_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_relatorio.xml",
+        "source": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_relatorio.xml"
+    },
+    {
+        "merged": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_principal.xml",
+        "source": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_principal.xml"
     },
     {
         "merged": "com.example.apptransporte.app-mergeDebugResources-30:/layout/activity_cadastrar_reserva.xml",
         "source": "com.example.apptransporte.app-main-33:/layout/activity_cadastrar_reserva.xml"
+    },
+    {
+        "merged": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-mergeDebugResources-30:\\layout\\activity_cadastrar_reserva.xml",
+        "source": "C:\\Users\\USUARIO\\.gradle\\daemon\\8.6\\com.example.apptransporte.app-main-33:\\layout\\activity_cadastrar_reserva.xml"
     }
 ]

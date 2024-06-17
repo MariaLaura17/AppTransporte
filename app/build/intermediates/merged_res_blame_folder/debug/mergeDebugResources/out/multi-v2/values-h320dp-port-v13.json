@@ -4,7 +4,7 @@
             "outputFile": "com.example.apptransporte.app-mergeDebugResources-29:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pedro\\.gradle\\caches\\transforms-4\\fcc53d891350d3f75d508d935199809d\\transformed\\material-1.10.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\USUARIO\\.gradle\\caches\\transforms-4\\fcc53d891350d3f75d508d935199809d\\transformed\\material-1.10.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

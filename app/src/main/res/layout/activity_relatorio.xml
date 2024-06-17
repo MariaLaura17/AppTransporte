@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5BCFA"
+    tools:context=".RelatorioActivity">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:text="Relatório:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="416dp"
+        android:layout_height="529dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="72dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_chevron_left_24"
+        app:backgroundTint="#6756BE"
+        app:maxImageSize="60dp"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="655dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
