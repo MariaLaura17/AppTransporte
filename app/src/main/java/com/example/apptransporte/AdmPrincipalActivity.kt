@@ -36,12 +36,19 @@ class AdmPrincipalActivity : AppCompatActivity() {
 
     private fun abrirRelatorioActivity() {
         binding.buttonRelatorio.setOnClickListener{
-            val selectedRadioButtonID=binding.radioGroup4.checkedRadioButtonId
-            val selectedRadioButton=binding.radioGroup4.findViewById<RadioButton>(selectedRadioButtonID)
-            val diaRelatorio = selectedRadioButton.getId().toString() // Obtém o ID e o converte para string
-            binding.textViewBoasVindas.text=diaRelatorio
-
-            val intent=Intent(this, RelatorioActivity::class.java)
+            var diaRelatorio: String=""
+            if (binding.radioButtonSegunda.isChecked) {
+                diaRelatorio="segunda-feira"
+            }else if (binding.radioButtonTerA.isChecked){
+                diaRelatorio="terça-feira"
+            }else if (binding.radioButtonQuarta.isChecked){
+                diaRelatorio="quarta-feira"
+            }else if (binding.radioButtonQuinta.isChecked){
+                diaRelatorio="quinta-feira"
+            }else if (binding.radioButtonSexta.isChecked){
+                diaRelatorio="sexta-feira"
+            }
+            val intent=Intent (this, RelatorioActivity::class.java)
             intent.putExtra("diaRelatorio", diaRelatorio)
             startActivity(intent)
             finish()

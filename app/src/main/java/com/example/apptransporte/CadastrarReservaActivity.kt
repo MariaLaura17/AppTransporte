@@ -41,11 +41,19 @@ class CadastrarReservaActivity : AppCompatActivity() {
         val adapterSpinnerEmbarque=ArrayAdapter(this, android.R.layout.simple_spinner_item, opcoesSpinnerEmbarque)
         adapterSpinnerEmbarque.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) //Adiciona um layout quando as opções aparecem no spinner para serem selecionadas
         binding.spinnerEmbSegunda.adapter=adapterSpinnerEmbarque
+binding.spinnerEmbTerca.adapter=adapterSpinnerEmbarque
+        binding.spinnerEmbQuarta.adapter=adapterSpinnerEmbarque
+        binding.spinnerEmbQuinta.adapter=adapterSpinnerEmbarque
+        binding.spinnerEmbSexta.adapter=adapterSpinnerEmbarque
 
         val opcoesSpinnerDesembarque= arrayOf("Pulo do Gato", "Floricultura", "Posto Leão", "Ponte do Olaria", "Casa")
         val adapterSpinnerDesembarque=ArrayAdapter(this, android.R.layout.simple_spinner_item, opcoesSpinnerDesembarque)
         adapterSpinnerDesembarque.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) //Adiciona um layout quando as opções aparecem no spinner para serem selecionadas
         binding.spinnerDesSegunda.adapter=adapterSpinnerDesembarque
+        binding.spinnerDesTerca.adapter=adapterSpinnerDesembarque
+        binding.spinnerDesQuarta.adapter=adapterSpinnerDesembarque
+        binding.spinnerDesQuinta.adapter=adapterSpinnerDesembarque
+        binding.spinnerDesSexta.adapter=adapterSpinnerDesembarque
 
         binding.buttonEnviar.setOnClickListener {
             if (binding.checkBoxSegunda.isChecked){

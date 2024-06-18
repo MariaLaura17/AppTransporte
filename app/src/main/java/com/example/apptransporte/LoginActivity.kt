@@ -34,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
     private fun abrirPrincipalActivity() {
         binding.buttonLogin.setOnClickListener {
 
-
             if (binding.radioButtonAdm.isChecked){
                 val seleciona = persistencia.selectAdministrador()
                 val cpfConsulta: String=seleciona.get(0).cpfAdministrador
@@ -47,12 +46,16 @@ class LoginActivity : AppCompatActivity() {
                 }
             }else if (binding.radioButtonPassageiro.isChecked){
                 val seleciona = persistencia.selectPassageiro()
+
                 val cpfConsulta: String=seleciona.get(0).cpf
                 val cpfDigitado: String=binding.editTextUsuario.text.toString()
                 val senhaConsulta: String=seleciona.get(0).senha
                 val senhaDigitada: String=binding.editTextPassword.text.toString()
                 if (cpfDigitado==cpfConsulta && senhaDigitada==senhaConsulta){
-                    startActivity(Intent(this, PrincipalActivity::class.java))
+                    val idPassageiro: Int=seleciona.get(0).id
+                    val intent=Intent(this, PrincipalActivity::class.java)
+                    intent.putExtra("idPassageiro", idPassageiro)
+                    startActivity(intent)
                     finish()
                 }
             }

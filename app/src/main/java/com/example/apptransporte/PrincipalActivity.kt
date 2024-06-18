@@ -33,11 +33,8 @@ class PrincipalActivity : AppCompatActivity() {
         try {
             conectaDatabase()
 
-            //aqui se tem que recuperar cpf
-            val seleciona = persistencia.selectAdministrador()
-            //val cpf: String=seleciona.get(1).cpf
-            //binding.textViewRodape.text=cpf
-
+val idPassageiro=intent.getIntExtra(        "idPassageiro", 0)
+            val seleciona = persistencia.selectDiaReserva(idPassageiro)
             // Cria um ArrayAdapter para o ListView
             val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, seleciona)
 

@@ -82,6 +82,40 @@ public class PersistenciaSQL {
         return passageiro;
     }
 
+    //Gera relatório de viagem
+    public ArrayList<String> gerarRelatorio(String diaRelatorio){
+        ArrayList<String> relatorio=new ArrayList<>();
+        String select="SELECT p.nomePassageiro, r.embarqueReserva, r.desembarqueReserva FROM Passageiro p JOIN Reserva r ON p.idPassageiro = r.idPassageiroFK WHERE r.dataReserva = '"+diaRelatorio+"'";
+        Cursor consulta = conexao.rawQuery(select, null);
+
+        if (consulta.moveToFirst()){
+            do {
+                String nomePassageiro=consulta.getString(0);
+                String embarqueReserva=consulta.getString(1);
+                String desembarqueReserva=consulta.getString(2);
+                String linhaRelatorio=nomePassageiro+" "+embarqueReserva+" "+desembarqueReserva;
+                relatorio.add(linhaRelatorio);
+            } while (consulta.moveToNext());
+        }
+        return relatorio;
+    }
+
+    //Consulta dias de viagem do passageiro
+    public ArrayList<String> selectDiaReserva(int idPassageiro){
+        ArrayList<String> reservaPassageiro=new ArrayList<>();
+        String select="SELECT dataReserva FROM Reserva WHERE idPassageiroFK = '"+idPassageiro+"'";
+        Cursor consulta = conexao.rawQuery(select, null);
+
+        if (consulta.moveToFirst()){
+            do {
+                String dataReserva=consulta.getString(0);
+                String linhaReservaPassageiro=dataReserva;
+                reservaPassageiro.add(linhaReservaPassageiro);
+            } while (consulta.moveToNext());
+        }
+        return reservaPassageiro;
+    }
+
     //Insere reserva
     public void putReserva(String dataReserva, String embarqueReserva, String desembarqueReserva, int idPassageiroFK, int idUniversidadeFK){
         ContentValues insert = new ContentValues();
