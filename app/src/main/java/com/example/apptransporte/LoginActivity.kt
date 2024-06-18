@@ -45,14 +45,14 @@ class LoginActivity : AppCompatActivity() {
                     finish()
                 }
             }else if (binding.radioButtonPassageiro.isChecked){
-                val seleciona = persistencia.selectPassageiro()
-
-                val cpfConsulta: String=seleciona.get(0).cpf
                 val cpfDigitado: String=binding.editTextUsuario.text.toString()
-                val senhaConsulta: String=seleciona.get(0).senha
+                val seleciona = persistencia.selectValidaUsuario(cpfDigitado)
+                val cpfConsulta: String=seleciona.get(1)
+
                 val senhaDigitada: String=binding.editTextPassword.text.toString()
+                val senhaConsulta: String=seleciona.get(2)
                 if (cpfDigitado==cpfConsulta && senhaDigitada==senhaConsulta){
-                    val idPassageiro: Int=seleciona.get(0).id
+                    val idPassageiro: Int=seleciona.get(0).toInt()
                     val intent=Intent(this, PrincipalActivity::class.java)
                     intent.putExtra("idPassageiro", idPassageiro)
                     startActivity(intent)

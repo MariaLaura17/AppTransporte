@@ -100,6 +100,25 @@ public class PersistenciaSQL {
         return relatorio;
     }
 
+    //retorna consulta para validação de usuário
+    public ArrayList<String> selectValidaUsuario(String cpfPassageiro)  {
+        ArrayList<String> validaUsuario=new ArrayList<>();
+        String select="SELECT idPassageiro, cpfPassageiro, senhaPassageiro FROM Passageiro WHERE cpfPassageiro = '"+cpfPassageiro+"'";
+        Cursor consulta = conexao.rawQuery(select, null);
+
+        if (consulta.moveToFirst()){
+            do {
+                int idPassageiro=consulta.getInt(0);
+                String cpfPassageiroConsulta=consulta.getString(1);
+                String senhaPassageiro=consulta.getString(2);
+                validaUsuario.add(Integer.toString(idPassageiro));
+                validaUsuario.add(cpfPassageiro);
+                validaUsuario.add(senhaPassageiro);
+            } while (consulta.moveToNext());
+        }
+        return validaUsuario;
+    }
+
     //Consulta dias de viagem do passageiro
     public ArrayList<String> selectDiaReserva(int idPassageiro){
         ArrayList<String> reservaPassageiro=new ArrayList<>();
