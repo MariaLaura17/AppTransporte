@@ -20,6 +20,7 @@ class CadastrarReservaActivity : AppCompatActivity() {
     private lateinit var conexao: SQLiteDatabase
     private lateinit var db: Database
     private lateinit var persistencia: PersistenciaSQL
+    private  var idPassageiro: Int=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,7 @@ class CadastrarReservaActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        idPassageiro=intent.getIntExtra("idPassageiro", 0)
         conectaDatabase()
 
         val opcoesSpinnerEmbarque= arrayOf("Pulo do Gato", "Floricultura", "Posto Leão", "Ponte do Olaria")
@@ -60,12 +62,34 @@ binding.spinnerEmbTerca.adapter=adapterSpinnerEmbarque
                 val dataReserva: String="segunda-feira"
                 val embarqueReserva=binding.spinnerEmbSegunda.selectedItem.toString()
                 val desembarqueReserva=binding.spinnerDesSegunda.selectedItem.toString()
-                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, 1, 1)
-
-
-
-                //binding.textViewTituloReserva.text=dataReserva
+                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, idPassageiro, 1)
             }
+            if (binding.checkBoxTerca.isChecked){
+                val dataReserva: String="terça-feira"
+                val embarqueReserva=binding.spinnerEmbTerca.selectedItem.toString()
+                val desembarqueReserva=binding.spinnerDesTerca.selectedItem.toString()
+                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, idPassageiro, 1)
+            }
+            if (binding.checkBoxQuarta.isChecked){
+                val dataReserva: String="quarta-feira"
+                val embarqueReserva=binding.spinnerEmbQuarta.selectedItem.toString()
+                val desembarqueReserva=binding.spinnerDesQuarta.selectedItem.toString()
+                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, idPassageiro, 1)
+            }
+            if (binding.checkBoxQuinta.isChecked){
+                val dataReserva: String="quinta-feira"
+                val embarqueReserva=binding.spinnerEmbQuinta.selectedItem.toString()
+                val desembarqueReserva=binding.spinnerDesQuinta.selectedItem.toString()
+                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, idPassageiro, 1)
+            }
+            if (binding.checkBoxSexta.isChecked){
+                val dataReserva: String="sexta-feira"
+                val embarqueReserva=binding.spinnerEmbSexta.selectedItem.toString()
+                val desembarqueReserva=binding.spinnerDesSexta.selectedItem.toString()
+                persistencia.putReserva(dataReserva, embarqueReserva, desembarqueReserva, idPassageiro, 1)
+            }
+            val intent=Intent(this, PrincipalActivity::class.java)
+            intent.putExtra("idPassageiro", idPassageiro)
             startActivity(Intent(this, PrincipalActivity::class.java))
             finish()
         }

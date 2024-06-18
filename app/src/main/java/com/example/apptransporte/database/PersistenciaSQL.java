@@ -124,7 +124,6 @@ public class PersistenciaSQL {
         ArrayList<String> reservaPassageiro=new ArrayList<>();
         String select="SELECT dataReserva FROM Reserva WHERE idPassageiroFK = '"+idPassageiro+"'";
         Cursor consulta = conexao.rawQuery(select, null);
-
         if (consulta.moveToFirst()){
             do {
                 String dataReserva=consulta.getString(0);

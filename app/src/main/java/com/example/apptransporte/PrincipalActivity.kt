@@ -17,6 +17,8 @@ class PrincipalActivity : AppCompatActivity() {
     private lateinit var conexao: SQLiteDatabase
     private lateinit var db: Database
     private lateinit var persistencia: PersistenciaSQL
+    private  var idPassageiro: Int=0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,18 +30,24 @@ class PrincipalActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         abrirCadastrarReservaActivity()
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        idPassageiro=intent.getIntExtra("idPassageiro", 0)
         try {
             conectaDatabase()
-
-val idPassageiro=intent.getIntExtra(        "idPassageiro", 0)
             val seleciona = persistencia.selectDiaReserva(idPassageiro)
             // Cria um ArrayAdapter para o ListView
             val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_activated_1, seleciona)
 
             // Define o ArrayAdapter como adaptador do ListView
             binding.listviewprincipalpassageiro.adapter = adapter
+            //notificar o listview de atualizações
+            adapter.notifyDataSetChanged()
         } catch (e: Exception) {
             // Trata erros de acesso ao banco de dados
             binding.textViewRodape.text = "Erro ao conectar ao banco de dados"
@@ -54,7 +62,10 @@ val idPassageiro=intent.getIntExtra(        "idPassageiro", 0)
 
     private fun abrirCadastrarReservaActivity() {
         binding.fabReservarViagem.setOnClickListener {
-            startActivity(Intent(this, CadastrarReservaActivity::class.java))
+            val intent=Intent(this,  CadastrarReservaActivity::class.java)
+            intent.putExtra("idPassageiro", idPassageiro)
+            startActivity(intent)
+            finish()
         }
     }
 }
